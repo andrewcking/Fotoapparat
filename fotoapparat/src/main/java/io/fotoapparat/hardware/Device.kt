@@ -169,6 +169,8 @@ internal fun updateConfiguration(
         focusMode = newConfiguration.focusMode ?: savedConfiguration.focusMode,
         exposureCompensation = newConfiguration.exposureCompensation
                 ?: savedConfiguration.exposureCompensation,
+        exposureLock = newConfiguration.exposureLock
+                ?: savedConfiguration.exposureLock,
         frameProcessor = newConfiguration.frameProcessor ?: savedConfiguration.frameProcessor,
         previewFpsRange = newConfiguration.previewFpsRange ?: savedConfiguration.previewFpsRange,
         sensorSensitivity = newConfiguration.sensorSensitivity

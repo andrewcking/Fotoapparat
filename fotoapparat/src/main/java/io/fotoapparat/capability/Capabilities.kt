@@ -18,6 +18,7 @@ data class Capabilities(
         val maxMeteringAreas: Int,
         val jpegQualityRange: IntRange,
         val exposureCompensationRange: IntRange,
+        val exposureLockModes: Boolean,
         val previewFpsRanges: Set<FpsRange>,
         val antiBandingModes: Set<AntiBandingMode>,
         val pictureResolutions: Set<Resolution>,
@@ -44,6 +45,7 @@ data class Capabilities(
                 "maxMeteringAreas:" + maxMeteringAreas.wrap() +
                 "jpegQualityRange:" + jpegQualityRange.wrap() +
                 "exposureCompensationRange:" + exposureCompensationRange.wrap() +
+                "exposureLockModes:" + exposureLockModes.wrap() +
                 "antiBandingModes:" + antiBandingModes.wrap() +
                 "previewFpsRanges:" + previewFpsRanges.wrap() +
                 "pictureResolutions:" + pictureResolutions.wrap() +

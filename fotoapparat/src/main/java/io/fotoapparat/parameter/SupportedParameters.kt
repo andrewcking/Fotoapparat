@@ -92,6 +92,13 @@ internal class SupportedParameters(
     }
 
     /**
+     * @see Camera.Parameters.isAutoExposureLockSupported
+     */
+    val supportedExposureLock by lazy {
+        cameraParameters.isAutoExposureLockSupported
+    }
+
+    /**
      * @see Camera.Parameters.getMaxNumFocusAreas
      */
     val maxNumFocusAreas by lazy {

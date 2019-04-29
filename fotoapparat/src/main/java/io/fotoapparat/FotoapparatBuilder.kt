@@ -119,6 +119,15 @@ class FotoapparatBuilder internal constructor(private var context: Context) {
     }
 
     /**
+     * @param exposure lock recieves a boolean value
+     */
+    fun exposureLock(lock: Boolean): FotoapparatBuilder = apply {
+        configuration = configuration.copy(
+                exposureLock = lock
+        )
+    }
+
+    /**
      * @param frameProcessor receives preview frames for processing.
      * @see FrameProcessorJava
      */
