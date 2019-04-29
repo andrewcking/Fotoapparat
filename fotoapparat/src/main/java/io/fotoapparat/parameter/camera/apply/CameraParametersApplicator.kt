@@ -27,6 +27,7 @@ private infix fun CameraParameters.tryApplyInto(parameters: Camera.Parameters) {
     jpegQuality applyJpegQualityInto parameters
     exposureCompensation applyExposureCompensationInto parameters
     exposureLock applyExposureLockInto parameters
+    whiteBalanceLock applyWhiteBalanceLockInto parameters
     antiBandingMode applyInto parameters
     previewFpsRange applyInto parameters
     previewResolution applyPreviewInto parameters
@@ -52,6 +53,10 @@ private infix fun Int.applyExposureCompensationInto(parameters: Camera.Parameter
 
 private infix fun Boolean.applyExposureLockInto(parameters: Camera.Parameters) {
     parameters.autoExposureLock = this
+}
+
+private infix fun Boolean.applyWhiteBalanceLockInto(parameters: Camera.Parameters) {
+    parameters.autoWhiteBalanceLock = this
 }
 
 private infix fun AntiBandingMode.applyInto(parameters: Camera.Parameters) {

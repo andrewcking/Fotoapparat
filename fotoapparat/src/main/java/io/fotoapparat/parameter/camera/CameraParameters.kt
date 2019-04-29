@@ -14,6 +14,7 @@ data class CameraParameters(
         val jpegQuality: Int,
         val exposureCompensation: Int,
         val exposureLock: Boolean,
+        val whiteBalanceLock: Boolean,
         val previewFpsRange: FpsRange,
         val antiBandingMode: AntiBandingMode,
         val sensorSensitivity: Int?,
@@ -27,6 +28,7 @@ data class CameraParameters(
                 "jpegQuality:" + jpegQuality.wrap() +
                 "exposureCompensation:" + exposureCompensation.wrap() +
                 "exposureLock:" + exposureLock.wrap() +
+                "whiteBalanceLock:" + whiteBalanceLock.wrap() +
                 "previewFpsRange:" + previewFpsRange.wrap() +
                 "antiBandingMode:" + antiBandingMode.wrap() +
                 "sensorSensitivity:" + sensorSensitivity.wrap() +

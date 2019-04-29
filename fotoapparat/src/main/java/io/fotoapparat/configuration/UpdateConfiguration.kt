@@ -12,6 +12,7 @@ data class UpdateConfiguration(
         override val jpegQuality: QualitySelector? = null,
         override val exposureCompensation: ExposureSelector? = null,
         override val exposureLock: Boolean? = null,
+        override val whiteBalanceLock: Boolean? = null,
         override val frameProcessor: FrameProcessor? = null,
         override val previewFpsRange: FpsRangeSelector? = null,
         override val antiBandingMode: AntiBandingModeSelector? = null,
@@ -72,6 +73,12 @@ data class UpdateConfiguration(
         fun exposureLock(lock: Boolean): Builder = apply {
             configuration = configuration.copy(
                     exposureLock = lock
+            )
+        }
+
+        fun whiteBalanceLock(lock: Boolean): Builder = apply {
+            configuration = configuration.copy(
+                    whiteBalanceLock = lock
             )
         }
 

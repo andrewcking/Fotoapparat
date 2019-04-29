@@ -9,6 +9,7 @@ interface Configuration {
     val jpegQuality: QualitySelector?
     val exposureCompensation: ExposureSelector?
     val exposureLock: Boolean?
+    val whiteBalanceLock: Boolean?
     val frameProcessor: FrameProcessor?
     val previewFpsRange: FpsRangeSelector?
     val antiBandingMode: AntiBandingModeSelector?

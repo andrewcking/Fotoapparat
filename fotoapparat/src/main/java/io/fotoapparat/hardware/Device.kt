@@ -171,6 +171,8 @@ internal fun updateConfiguration(
                 ?: savedConfiguration.exposureCompensation,
         exposureLock = newConfiguration.exposureLock
                 ?: savedConfiguration.exposureLock,
+        whiteBalanceLock = newConfiguration.whiteBalanceLock
+                ?: savedConfiguration.whiteBalanceLock,
         frameProcessor = newConfiguration.frameProcessor ?: savedConfiguration.frameProcessor,
         previewFpsRange = newConfiguration.previewFpsRange ?: savedConfiguration.previewFpsRange,
         sensorSensitivity = newConfiguration.sensorSensitivity

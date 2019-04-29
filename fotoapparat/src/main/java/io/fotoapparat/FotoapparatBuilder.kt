@@ -119,11 +119,20 @@ class FotoapparatBuilder internal constructor(private var context: Context) {
     }
 
     /**
-     * @param exposure lock recieves a boolean value
+     * @param auto exposure lock receives a boolean value
      */
     fun exposureLock(lock: Boolean): FotoapparatBuilder = apply {
         configuration = configuration.copy(
                 exposureLock = lock
+        )
+    }
+
+    /**
+     * @param auto white balance lock receives a boolean value
+     */
+    fun whiteBalanceLock(lock: Boolean): FotoapparatBuilder = apply {
+        configuration = configuration.copy(
+                whiteBalanceLock = lock
         )
     }
 

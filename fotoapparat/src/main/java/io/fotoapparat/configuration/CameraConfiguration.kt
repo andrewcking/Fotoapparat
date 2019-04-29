@@ -21,6 +21,7 @@ data class CameraConfiguration(
         override val jpegQuality: QualitySelector = manualJpegQuality(DEFAULT_JPEG_QUALITY),
         override val exposureCompensation: ExposureSelector = manualExposure(DEFAULT_EXPOSURE_COMPENSATION),
         override val exposureLock: Boolean = false,
+        override val whiteBalanceLock: Boolean = false,
         override val frameProcessor: FrameProcessor? = null,
         override val previewFpsRange: FpsRangeSelector = highestFps(),
         override val antiBandingMode: AntiBandingModeSelector = firstAvailable(
@@ -68,6 +69,12 @@ data class CameraConfiguration(
         fun exposureLock(lock: Boolean): Builder = apply {
             cameraConfiguration = cameraConfiguration.copy(
                     exposureLock = lock
+            )
+        }
+
+        fun whiteBalanceLock(lock: Boolean): Builder = apply {
+            cameraConfiguration = cameraConfiguration.copy(
+                    whiteBalanceLock = lock
             )
         }
 

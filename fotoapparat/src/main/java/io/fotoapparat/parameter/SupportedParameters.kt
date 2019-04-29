@@ -99,6 +99,13 @@ internal class SupportedParameters(
     }
 
     /**
+     * @see Camera.Parameters.isAutoWhiteBalanceLockSupported
+     */
+    val supportedWhiteBalanceLock by lazy {
+        cameraParameters.isAutoWhiteBalanceLockSupported
+    }
+
+    /**
      * @see Camera.Parameters.getMaxNumFocusAreas
      */
     val maxNumFocusAreas by lazy {
