@@ -11,10 +11,10 @@ import io.fotoapparat.hardware.orientation.OrientationState
 internal fun Device.startOrientationMonitoring(
         orientationSensor: OrientationSensor
 ) {
-    orientationSensor.start { orientationState: OrientationState ->
-        executor.execute(Operation(cancellable = true) {
-            val cameraDevice = getSelectedCamera()
-            cameraDevice.setDisplayOrientation(orientationState)
-        })
-    }
+//    orientationSensor.start { orientationState: OrientationState ->
+//        executor.execute(Operation(cancellable = true) {
+//            val cameraDevice = getSelectedCamera()
+//            cameraDevice.setDisplayOrientation(orientationState)
+//        })
+//    }
 }
